@@ -1,0 +1,51 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="/Public/Home/css/login.css">
+</head>
+<body>
+	<form action="<?php echo U('Home/User/doLogin');?>" method="post">
+		<nav class="nav">
+			<a class="return" href="<?php echo U('Home/index/index');?>"></a>
+			<span>登录</span>
+		</nav>
+		<div class="lg-tab">
+			<a class="select" href="javascript:void(0)">网站密码登录</a>
+			<a href="javascript:void(0)">短信随机码登录</a>
+		</div>
+		<div class="lg-list">
+			<div class="ipt ph-num">
+				<input type="text" placeholder="请输入手机号" name="name">
+			</div>
+			<div class="ipt password">
+				<input type="password" placeholder="请输入密码" name="password">
+			</div>
+			<div class="code">
+				<div class="ipt pic-code">
+					<input type="text" placeholder="请输入图片码" name="verify">
+				</div>
+				<a class="pic" href="javascript:void(0)">
+					<img src="<?php echo U('Home/index/verifycode');?>" class="verify">
+				</a>
+			</div>
+			<input class="login-btn" type="submit" name="" value="登录">		
+		</div>		
+	</form>
+			<a class="register" href="<?php echo U('Home/User/reg');?>">还没注册？</a>
+			<a class="forget" href="javascript:void(0)">忘记密码</a>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+				$(function() {
+					$('.verify').click(function() {
+						newsrc = "/Home/Index/verifycode/v/"+Math.random();
+						$('.verify').attr('src',newsrc);			
+					});		
+				});
+	</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+html,body,nav,input,a,span,img {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	font-size: 42.67px;
+	font-family: Arial,"Hiragino Sans GB","Microsoft Yahei","Microsoft Yahei UI",微软雅黑,"Segoe UI",Tahoma,宋体b8b体,SimSun,sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+.nav {
+	line-height: 0.9rem;
+    background: #fff;
+    font-size: 0.3rem;
+    color: #1b1b1b;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ebe9e9;
+}
+.return {
+	display: block;
+    width: 0.24rem;
+    height: 0.24rem;
+    border: solid #ff5a37;
+    border-width: 0 0 1.5px 1.5px;
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    top: 0.35rem;
+    left: 0.3rem;
+}
+.lg-tab {
+	overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.4rem 0;
+}
+.lg-tab a {
+    display: block;
+    float: left;
+    width: 50%;
+    font-size: 0.3rem;
+    color: #aaa;
+    text-align: center;
+    position: relative;
+}
+.lg-tab a.select {
+	color: #ff5a37;
+}
+.lg-tab a.select::before {
+	content: "";
+    width: 100%;
+    height: 2px;
+    background: #ff5a37;
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+}
+.lg-tab a.select::after {
+    content: "";
+    width: 1px;
+    height: 0.5rem;
+    background: #c5c5c5;
+    position: absolute;
+    top: -0.09rem;
+    right: 0;
+}
+.lg-list {
+	padding: 0.3rem 0.3rem 0 0.3rem;
+}
+.lg-list .ipt {
+	border: 1px solid #c5c5c5;
+    border-radius: 0.12rem;
+    font-size: 0.3rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+    padding: 0.31rem 0 0.31rem 0.9rem;
+    position: relative;
+}
+.lg-list .ipt::before {
+	content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.2rem;
+}
+.lg-list .ph-num::before {
+	background-image: url("../image/ph-num.png");
+}
+.lg-list .password::before {
+	background-image: url("../image/password.png");
+}
+.lg-list .pic-code::before {
+	background-image: url("../image/code.png");
+}
+.lg-list .ipt input {
+	border: none;
+    outline: none;
+    font-size: 0.3rem;
+    width: 100%;
+}
+.lg-list .code {
+	overflow: hidden;
+	width: 100%;
+} 
+.lg-list .pic-code {
+	width: 60%;
+	float: left;
+}
+.lg-list .pic {
+	width: 36%;
+    height: 0.96rem;
+    float: right;
+    border: 1px solid #c5c5c5;
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+}
+.lg-list .pic img {
+	width: 100%;
+	display: block;
+}
+.login-btn {
+    border: none;
+    width: 100%;
+    line-height: 0.96rem;
+    border-radius: 0.12rem;
+    background: #ff5a37;
+    margin-bottom: 0.3rem;
+    font-size: 0.3rem;
+    color: #fff;
+    text-align: center;
+}
+.register {
+	float: left;
+    font-size: 0.3rem;
+    color: #ff5a37;
+}
+.forget {
+	float: right;
+    font-size: 0.3rem;
+    color: #aaa;
+}

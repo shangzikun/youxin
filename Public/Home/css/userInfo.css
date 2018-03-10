@@ -1,0 +1,105 @@
+html,body,a,img,span {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	background-color: #f1f1f1;
+	font-size: 42.67px;
+	font-family: Arial,"Hiragino Sans GB","Microsoft Yahei","Microsoft Yahei UI",微软雅黑,"Segoe UI",Tahoma,宋体b8b体,SimSun,sans-serif;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+.info-head {
+	height: 3.9rem;
+	padding: 0.29rem 0.27rem 0 0.27rem;
+	margin-bottom: 0.2rem;
+	background-image: url("../image/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden; 
+}
+.uxin-logo {
+	width: 0.68rem;
+	height: 0.3rem;
+	background-image: url("../image/logo.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: block;
+}
+.uxin-app {
+	display: block;
+    float: right;
+    font-size: 0.3rem;
+    color: #fff;
+}
+.uxin-app::before {
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    background-image: url("../image/download.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    margin-bottom: -0.024rem;
+    margin-right: 0.08rem;
+}
+.uxin-head {
+	display: block;
+    width: 1.28rem;
+    height: 1.28rem;
+    background: #d9d9d9;
+    border-radius: 100%;
+    border: 0.04rem solid #fff;
+    margin: 0.6rem auto 0.18rem;
+    overflow: hidden;
+}
+.uxin-head img {
+	width: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.txt {
+    display: block;
+    font-size: 0.25rem;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrap {
+	padding-left: 1.16rem;
+    background: #fff;
+    margin-bottom: 0.2rem;
+}
+.wrap a {
+	display: block;
+    line-height: 0.92rem;
+    font-size: 0.26rem;
+    color: #1b1b1b;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+}
+.wrap a:before {
+    content: "";
+    width: 0.44rem;
+    height: 0.44rem;
+    position: absolute;
+    top: 0.24rem;
+    left: -0.8rem;
+}
+.collection::before {
+	background-image: url("../image/icon1.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.record::before {
+	background-image: url("../image/icon2.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}

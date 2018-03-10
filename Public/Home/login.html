@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="{:U('Home/index/index')}" method="post">
+		姓名：<input type="text" name="name">
+		<br>
+		密码：<input type="text" name="password">
+		<br>
+		验证码:<input type="text" name="verify">
+		 <img src="{:U('Home/index/verifycode')}" class="verify">
+		<a href="javascript:;" class="alterVerify" >看不清，换一张</a></td>
+		<input type="submit" name="">
+	</form>
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.verify').click(function() {
+			newsrc = "/Home/Index/verifycode/v/"+Math.random();
+			$('.verify').attr('src',newsrc);
+			//return false;
+		});
+		$('.alterVerify').click(function() {
+			newsrc = "/Home/Index/verifycode/v/"+Math.random();
+			$('.verify').attr('src',newsrc);
+			//return false;
+		});
+	});
+</script>
+</body>
+</html>
