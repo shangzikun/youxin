@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
-	<form action="{:U('Admin/Classify/doEdit')}" method="post" enctype="multipart/form-data" >
+	<form action="<?php echo U('Admin/Classify/doEdit');?>" method="post" enctype="multipart/form-data" >
 	<select name="parent_id" >
 		<option value="0">顶级分类</option>
 		<?php foreach ($classify as $value) { ?>

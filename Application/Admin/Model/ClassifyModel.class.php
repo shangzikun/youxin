@@ -15,6 +15,10 @@ class ClassifyModel extends BaseModel {
 		}
 		return $data;
 	}
+	public function getInfoById($id) {
+		$info = $this->where(array('id'=>$id))->find();
+		return $info;
+	}
 	public function audit($id,$status=0) {
 		$data = array(
 			'status' => $status,

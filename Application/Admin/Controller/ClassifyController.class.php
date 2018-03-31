@@ -34,14 +34,25 @@ class ClassifyController extends Controller {
         $id = I('get.id','');
         $classifyModel = D('Classify');
         $classify = $classifyModel->getLists();
-        $data = $ClassifyModel->getInfoById($id);
+        $data = $classifyModel->getInfoById($id);
         $this->assign('classify',$classify);
         $this->assign('data',$data);
         $this->display();
     }
     public function doEdit() {
-        $id = I('get.id','');
-
+        $id = I('post.id','');
+        $name = I('post.name','');
+        $parent_id = I('post.parent_id',0);
+        $image = uploadFile('image','car_classify_brand');
+        $data = array(
+            'name'      => $name,
+            'parent_id' => $parent_id,
+            'image'     => $image,
+            );
+        $status = D('Classify')->where("id={$id}")->save($data);
+        if($status) {
+            $this->success('修改成功',U('Admin/Classify/lists'));
+        }
     }
     public function onLine() {
     	$id = I('get.id','');

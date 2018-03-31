@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-    	$classify = D('Classify');
+    	// $classify = D('Classify');
     	
         $this->display();
     }

@@ -28,7 +28,7 @@
 				<td><?php echo $value['id']; ?></td>
 				<td><?php echo $value['name']; ?></td>
 				<td><?php echo $value['parent_id']; ?></td>
-				<td><?php echo $value['image']; ?></td>
+				<td><img src="/Uploads/<?php echo $value['image']; ?>" width="30" height="30" alt="no pic"></td>
 				<td><?php echo $value['status']; ?></td>
 				<td><?php if($value['status'] == 0) { ?>
 							<a href="{:U('Admin/Classify/onLine',array('id'=>$value['id']))}">上线</a>
